@@ -1,0 +1,30 @@
+<% include ./partials/header %>
+
+<div class="container">
+  <div class="row movie-row">
+    <% data["Search"].forEach(function(movie) { %>
+    <div class="col-md-4 col-lg-3">
+      <div class="card result-card">
+        <img class="card-img-top" src="<%= movie["Poster"] %>"
+              onerror="this.src='img/no_poster.png'" alt="Movie Poster Image">
+        <div class="card-block">
+          <h4 class="card-title"><%= movie["Title"] %></h4>
+          <h4 class="card-title"><%= movie["Year"] %></h4>
+        </div>
+
+        <div class="card-footer">
+        <form action="/details" method="GET">
+          <button type="submit" class="btn btn-primary" value="<%= movie["imdbID"] %>" name="imdb_id">
+            Details
+          </button>
+        </form>
+        </div>
+
+      </div>
+    </div>
+    <% }) %>
+  </div>
+</div>
+
+<% include ./partials/footer %>
+

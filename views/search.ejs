@@ -1,0 +1,24 @@
+<% include ./partials/header %>
+
+<!-- Main contents of search page -->
+<div class="inner cover cover-main container">
+
+  <div class="cover-contents">
+    <div><i class="fa fa-film fa-5x cover-icon" aria-hidden="true"></i></div>
+    <h1 class="cover-heading">Search Movies</h1>
+    <p class="lead">To get a list of movies, enter a word or phrase for the movie title below, and click 'Search'.</p>
+
+    <form action="/results" method="GET">
+      <div class="form-group text-center">
+        <input class="form-control movie-search-box" type="text" placeholder="search term" name="search">
+        <small class="form-text text-muted">Example: Harry Potter</small>
+      </div>
+      <button type="submit" class="btn btn-primary">Search</button>
+    </form>
+  </div>
+
+</div>
+<!-- End: Main contents of search page -->
+
+<% include ./partials/footer %>
+
