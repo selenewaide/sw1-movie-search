@@ -33,7 +33,7 @@ git clone https://github.com/selenewaide/sw1-movie-search.git
 There are two variables at the top of the app.js file called omdb_api_key and youtube_api_key. The contents of these two variables needs to be amended with valid API keys obtained from OMDB and Youtube(v3).
 
 ###### Step 3
-Run the app.js file to render the website.
+Run the app.js file to render the website - on localhost port 9000.
 ```
 node app.js
 ```
